@@ -12,7 +12,10 @@
         android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:iconifiedByDefault="false"/>
+        android:iconifiedByDefault="true"
+        android:editTextColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        app:collapseIcon="@android:drawable/ic_menu_search"/>
 
     <ListView
         android:id="@+id/listItems"
