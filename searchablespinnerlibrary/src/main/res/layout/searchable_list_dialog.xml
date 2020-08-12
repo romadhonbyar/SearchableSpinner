@@ -12,9 +12,9 @@
         android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:iconifiedByDefault="true"
-        android:editTextColor="@android:color/black"
-        android:textColorHint="@android:color/black"/>
+        android:iconifiedByDefault="false"
+        android:queryHint="Search here"
+        android:background="#999999"/>
 
     <ListView
         android:id="@+id/listItems"
