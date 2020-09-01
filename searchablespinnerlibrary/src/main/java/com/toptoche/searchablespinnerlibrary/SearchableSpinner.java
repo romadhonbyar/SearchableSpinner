@@ -16,11 +16,6 @@ import android.widget.SpinnerAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.support.annotation.NonNull;;
-import android.support.annotation.Nullable;
-
-import org.jetbrains.annotations.NotNull;
-
 public class SearchableSpinner extends Spinner implements View.OnTouchListener,
         SearchableListDialog.SearchableItem {
 
@@ -113,9 +108,8 @@ public class SearchableSpinner extends Spinner implements View.OnTouchListener,
                     
                 ArrayAdapter arrayAdapter = new ArrayAdapter(_context, android.R.layout
                         .simple_list_item_1, new String[]{_strHintText}) {
-                        @NotNull
                         @Override
-                        public View getView(int position, View convertView, @NotNull ViewGroup parent) {
+                        public View getView(int position, View convertView, ViewGroup parent) {
                             View view = super.getView(position, convertView, parent);
                             view.setPadding(0, view.getPaddingTop(), view.getPaddingRight(), view.getPaddingBottom());
                             return view;
