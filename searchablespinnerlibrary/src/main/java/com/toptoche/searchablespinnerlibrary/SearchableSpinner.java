@@ -67,7 +67,14 @@ public class SearchableSpinner extends Spinner implements View.OnTouchListener,
         _arrayAdapter = (ArrayAdapter) getAdapter();
         if (!TextUtils.isEmpty(_strHintText)) {
             ArrayAdapter arrayAdapter = new ArrayAdapter(_context, android.R.layout
-                    .simple_list_item_1, new String[]{_strHintText});
+                    .simple_list_item_1, new String[]{_strHintText}) {
+                        @Override
+                        public View getView(int position, View convertView, ViewGroup parent) {
+                            View view = super.getView(position, convertView, parent);
+                            view.setPadding(0, view.getPaddingTop(), view.getPaddingRight(), view.getPaddingBottom());
+                            return view;
+                        }
+                    };
             _isFromInit = true;
             setAdapter(arrayAdapter);
         }
